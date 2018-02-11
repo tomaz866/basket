@@ -1,24 +1,26 @@
 package com.example.koszyk.controller;
 
-import com.example.koszyk.domain.Item;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.koszyk.service.DbService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @RequestMapping("/v1/basket")
 public class BasketController {
 
-    @RequestMapping(method = RequestMethod.POST, value = "open")
-    public void openBasket() {
+    @Autowired
+    private DbService service;
 
+    @RequestMapping(method = RequestMethod.GET, value = "open")
+    @ResponseBody
+    public long openBasket() {
+        return service.open();
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "close")
+    @ResponseBody
     public double closeBasket() {
-        return 10;
+        return 100;
     }
 }
