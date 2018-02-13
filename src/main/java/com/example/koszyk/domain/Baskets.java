@@ -1,28 +1,14 @@
 package com.example.koszyk.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
-@NamedNativeQueries( {
-
-        @NamedNativeQuery(
-                name = "Baskets.closeBaskets",
-                query = "UPDATE BASKETS SET CLOSED = :NOWA,SUMA = 100 WHERE ID = :ID",
-                resultClass = Baskets.class
-        ),
-        @NamedNativeQuery(
-                name = "Baskets.getSum",
-                query = "SELECT SUMA FROM BASKETS WHERE ID = :ID",
-                resultClass = Baskets.class
-        )
-})
-
+@AllArgsConstructor
 @Entity
 @Table(name = "BASKETS")
 @Getter
@@ -31,7 +17,7 @@ public class Baskets {
 
     @NotNull
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private long id;
 

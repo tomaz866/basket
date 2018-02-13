@@ -1,6 +1,6 @@
 package com.example.koszyk.controller;
 
-import com.example.koszyk.service.DbService;
+import com.example.koszyk.service.BasketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,17 +10,15 @@ import org.springframework.web.bind.annotation.*;
 public class BasketController {
 
     @Autowired
-    private DbService service;
+    private BasketService service;
 
-    @RequestMapping(method = RequestMethod.GET, value = "open")
-    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST, value = "open")
     public long openBasket() {
         return service.open();
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "close")
-    @ResponseBody
-    public double closeBasket() {
-        return 100;
+    @RequestMapping(method = RequestMethod.PUT, value = "close")
+    public double closeBasket(@RequestParam long id) {
+        return service.close(id);
     }
 }

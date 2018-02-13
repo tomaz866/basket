@@ -1,20 +1,30 @@
 package com.example.koszyk.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+@NamedNativeQuery(
+        name = "BasketItems.counts",
+        query = "SELECT SUM(SUMA) FROM BASKET_ITEMS WHERE BASKET_ID = :ID GROUP BY BASKET_ID",
+        resultClass = BasketItems.class
+)
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "BASKET_ITEMS")
 @Getter
 @Setter
 public class BasketItems {
 
-    @NotNull
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private long id;
 
@@ -33,11 +43,10 @@ public class BasketItems {
     @Column(name = "SUMA")
     private double sumPrice;
 
-    public BasketItems(long idBasket, String name, int quantity) {
-        this.idBasket = idBasket;
+    public BasketItems(String name, long idBasket, int quantity) {
         this.name = name;
+        this.idBasket = idBasket;
         this.quantity = quantity;
-        this.sumPrice = quantity * price;
     }
 
 }

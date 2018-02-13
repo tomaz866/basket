@@ -1,7 +1,7 @@
 package com.example.koszyk.controller;
 
 import com.example.koszyk.domain.BasketItems;
-import com.example.koszyk.service.DbService;
+import com.example.koszyk.service.BasketItemsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,11 +12,11 @@ import java.util.List;
 public class ItemController {
 
     @Autowired
-    private DbService service;
+    private BasketItemsService service;
 
-    @RequestMapping(method = RequestMethod.GET, value = "add")
-    public long add(@RequestParam String name, @RequestParam Long basketId, @RequestParam int q) {
-        return service.addItem(name, q, basketId);
+    @RequestMapping(method = RequestMethod.POST, value = "add")
+    public long add(@RequestParam String name, @RequestParam long bId, @RequestParam int q) {
+        return service.addItem(name, bId, q);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "delete")
@@ -25,8 +25,13 @@ public class ItemController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "showBasket")
-    public List<BasketItems> showBasket(@RequestParam Long basketId) {
-        return service.showItems(basketId);
+    public List<BasketItems> showBasket(@RequestParam Long bId) {
+        return service.showItems(bId);
+    }
+
+    @RequestMapping(method = RequestMethod.PUT, value = "update")
+    public void update(@RequestParam Long itemId, @RequestParam int q) {
+        service.updateItem(itemId, q);
     }
 }
 
