@@ -21,8 +21,8 @@ public interface ItemRepository extends CrudRepository<BasketItems,Long> {
 
     BasketItems getById(Long id);
 
-    @Query(nativeQuery = true)
-    double counts(@Param("ID") Long id);
+
+
 
 
 

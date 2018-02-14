@@ -8,12 +8,6 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-@NamedNativeQuery(
-        name = "BasketItems.counts",
-        query = "SELECT SUM(SUMA) FROM BASKET_ITEMS WHERE BASKET_ID = :ID GROUP BY BASKET_ID",
-        resultClass = BasketItems.class
-)
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
