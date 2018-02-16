@@ -6,13 +6,13 @@ Została napisana za pomocą Java 8 z użyciem Springa, Hibernate i Lombok.
 
 Przed uruchomieniem aplikacji należy skonfigurować bazę danych w pliku apllication.properties.
 
-Działanie aplikacji: 
+# Działanie aplikacji 
 Aplikacja tworzy dwie tabele w bazie danych (Baskets i BasketItems).Tabela Baskets przechowuje informacje o koszyku ( data otwarcia koszyka,
 data zamknięcia, suma przedmiotów w koszyku), tabela BasketItems przechowuje informacje o przedmiotach w koszyku (nazwę przedmiotu,
 ilość przedmiotów, cene jednostkową, sume oraz ID koszyka w którym przedmioty się znajdują).Otwarcie koszyka dodaje rekord do tabeli Baskets.
 Działanie na koszyku odbywa się w tabeli BasketItems. Zamknięcie koszyka aktualizuje rekord w tabeli Baskets.
 
-Działanie metod:
+# Działanie metod
 Otwarcie koszyka - localhost:8080/v1/basket/open
 Zwraca ID koszyka w tabeli Baskets
 
@@ -30,5 +30,5 @@ Usunięcie przedmiotu - localhost:8080/v1/items/delete?itemId='a'          , 'a'
 Pokazanie listy przedmiotów w koszyku 
 localhost:8080/v1/items/showBasket?bId='a'       , 'a' - ID koszyka z tabeli Baskets 
 
-Cały czas aplikacja jest poprawiana ( kilka wartości jest wpisanych na sztywno, ale z czasem będą pobierane z tabel). 
+Cały czas aplikacja jest poprawiana. 
 
