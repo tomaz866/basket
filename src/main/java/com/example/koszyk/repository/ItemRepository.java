@@ -1,9 +1,7 @@
 package com.example.koszyk.repository;
 
 import com.example.koszyk.domain.BasketItems;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

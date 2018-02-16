@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "STORAG")
+@Table(name = "STORAGE")
 @Getter
 public class Storage {
 
