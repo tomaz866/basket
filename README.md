@@ -5,6 +5,7 @@ działanie na koszyku (dodanie,usunięcie,aktualizacja przedmiotu oraz pobranie 
 Została napisana za pomocą Java 8 z użyciem Springa, Hibernate i Lombok.
 
 Przed uruchomieniem aplikacji należy skonfigurować bazę danych w pliku apllication.properties.
+Należy wstawić plik sql z przedmiotami w magazynie do folderu resources.
 
 # Działanie aplikacji 
 Aplikacja tworzy trzy tabele w bazie danych (Baskets, BasketItems i Storage).Tabela Baskets przechowuje informacje o koszyku ( data otwarcia koszyka,
