@@ -20,7 +20,6 @@ Zwraca ID koszyka w tabeli Baskets
 Zamknięcie koszyka - localhost:8080/v1/basket/close?id='a'  ,  'a' - numer ID koszyka który chcemy zamknąć z tabeli Baskets
 Zwraca sume przedmiotów w koszyku.
 
-Metody - działanie w koszyku:
 Dodanie przedmiotu - localhost:8080/v1/items/add?name='a'&bId='b'&q='c'   , 'a' - nazwa przedmiotu, 'b' - numer ID koszyka do którego dodajemy przedmiot
 Zwraca ID przedmiotu w tabeli BasketItems                                   'c' - ilość przedmiotu
 
@@ -30,6 +29,3 @@ Usunięcie przedmiotu - localhost:8080/v1/items/delete?itemId='a'          , 'a'
 
 Pokazanie listy przedmiotów w koszyku 
 localhost:8080/v1/items/showBasket?bId='a'       , 'a' - ID koszyka z tabeli Baskets 
-
-Cały czas aplikacja jest poprawiana. 
-
