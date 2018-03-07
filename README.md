@@ -1,4 +1,4 @@
-# koszyk
+# basket
 
 Aplikacja koszyk jest backendowym narzędziem dla sklepu on-line. Udostępnia 3 funkcjonalności: otwarcie koszyka,
 działanie na koszyku (dodanie,usunięcie,aktualizacja przedmiotu oraz pobranie całej listy przedmiotów w koszyku),zamknięcie koszyka. 
