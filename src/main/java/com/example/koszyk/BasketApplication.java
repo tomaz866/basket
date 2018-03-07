@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KoszykApplication {
+public class BasketApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KoszykApplication.class, args);
+		SpringApplication.run(BasketApplication.class, args);
 	}
 }
