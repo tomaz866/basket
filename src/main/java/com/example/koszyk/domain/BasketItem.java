@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
 @Table(name = "BASKET_ITEMS")
 @Getter
 @Setter
-public class BasketItems {
+public class BasketItem {
 
     @Id
     @NotNull
@@ -37,7 +37,7 @@ public class BasketItems {
     @Column(name = "SUMA")
     private double sumPrice;
 
-    public BasketItems(String name, long idBasket, int quantity) {
+    public BasketItem(String name, long idBasket, int quantity) {
         this.name = name;
         this.idBasket = idBasket;
         this.quantity = quantity;

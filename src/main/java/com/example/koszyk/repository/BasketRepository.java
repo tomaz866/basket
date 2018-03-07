@@ -1,16 +1,16 @@
 package com.example.koszyk.repository;
 
-import com.example.koszyk.domain.Baskets;
+import com.example.koszyk.domain.Basket;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface BasketRepository extends CrudRepository<Baskets,Long> {
+public interface BasketRepository extends CrudRepository<Basket,Long> {
 
     @Override
-    Baskets save(Baskets basket);
+    Basket save(Basket basket);
 
-    Baskets getById(Long id);
+    Basket getById(Long id);
 
 
 

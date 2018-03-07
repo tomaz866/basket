@@ -1,23 +1,23 @@
 package com.example.koszyk.repository;
 
-import com.example.koszyk.domain.BasketItems;
+import com.example.koszyk.domain.BasketItem;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface ItemRepository extends CrudRepository<BasketItems,Long> {
+public interface ItemRepository extends CrudRepository<BasketItem,Long> {
 
     @Override
-    BasketItems save(BasketItems items);
+    BasketItem save(BasketItem items);
 
     @Override
     void deleteById(Long id);
 
-    List<BasketItems> getAllByIdBasket(Long idBasket);
+    List<BasketItem> getAllByIdBasket(Long idBasket);
 
-    BasketItems getById(Long id);
+    BasketItem getById(Long id);
 
 
 

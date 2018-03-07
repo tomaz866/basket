@@ -1,6 +1,6 @@
 package com.example.koszyk.controller;
 
-import com.example.koszyk.domain.BasketItems;
+import com.example.koszyk.domain.BasketItem;
 import com.example.koszyk.service.BasketItemsService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -34,11 +34,11 @@ public class ItemControllerTest {
     @Test
     public void shouldShowBasket() throws Exception {
         //Given
-        BasketItems item1 = new BasketItems("A",1L,3);
-        BasketItems item2 = new BasketItems("B",1L,4);
-        BasketItems item3 = new BasketItems("C",1L,7);
+        BasketItem item1 = new BasketItem("A",1L,3);
+        BasketItem item2 = new BasketItem("B",1L,4);
+        BasketItem item3 = new BasketItem("C",1L,7);
 
-        List<BasketItems> items = new ArrayList<>();
+        List<BasketItem> items = new ArrayList<>();
         items.add(item1);
         items.add(item2);
         items.add(item3);

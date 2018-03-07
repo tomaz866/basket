@@ -1,6 +1,6 @@
 package com.example.koszyk.controller;
 
-import com.example.koszyk.domain.BasketItems;
+import com.example.koszyk.domain.BasketItem;
 import com.example.koszyk.service.BasketItemsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +25,7 @@ public class ItemController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "showBasket")
-    public List<BasketItems> showBasket(@RequestParam Long bId) {
+    public List<BasketItem> showBasket(@RequestParam Long bId) {
         return service.showItems(bId);
     }
 

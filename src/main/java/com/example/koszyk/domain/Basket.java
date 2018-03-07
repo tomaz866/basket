@@ -13,7 +13,7 @@ import java.util.Date;
 @Table(name = "BASKETS")
 @Getter
 @Setter
-public class Baskets {
+public class Basket {
 
     @NotNull
     @Id
@@ -31,7 +31,7 @@ public class Baskets {
     @Column(name = "SUMA")
     private double sum;
 
-    public Baskets() {
+    public Basket() {
         this.created = new Date();
     }
 }
